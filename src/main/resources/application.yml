@@ -1,0 +1,14 @@
+h2:
+  console:
+    enabled: true
+
+logging:
+  file:
+    name: database.log
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        orm:
+          jdbc:
+            bind: trace
