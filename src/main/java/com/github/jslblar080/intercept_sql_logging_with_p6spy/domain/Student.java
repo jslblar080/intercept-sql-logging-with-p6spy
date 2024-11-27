@@ -9,21 +9,19 @@ import lombok.*;
 @Entity
 @NoArgsConstructor
 @RequiredArgsConstructor
+@Getter
 @ToString
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
     private Long id;
 
     @NonNull
-    @Getter
     @Setter
     private String firstName;
 
     @NonNull
-    @Getter
     @Setter
     private String lastName;
 }
