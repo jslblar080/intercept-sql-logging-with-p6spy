@@ -32,6 +32,8 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
 	runtimeOnly 'com.h2database:h2'
+
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.10.0'
 }
 
 tasks.named('test') {
