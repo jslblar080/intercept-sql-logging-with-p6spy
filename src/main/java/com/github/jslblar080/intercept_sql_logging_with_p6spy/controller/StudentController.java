@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import com.github.jslblar080.intercept_sql_logging_with_p6spy.service.StudentService;
 
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -51,11 +50,9 @@ public class StudentController {
 
         Long studentId = studentService.save(student);
 
-        Optional<Student> studentRegistered = studentService.findById(studentId);
-        if (studentRegistered.isPresent()) {
-            log.info(studentRegistered.get().toString());
-        } else
-            throw new RuntimeException("Student not registered!");
+        Student studentRegistered = studentService.findById(studentId)
+                .orElseThrow(() -> new IllegalArgumentException("Student not registered!"));
+        log.info(studentRegistered.toString());
     }
 
     // http://localhost:8080/student/Jungsoo
