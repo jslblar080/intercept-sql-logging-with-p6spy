@@ -4,11 +4,9 @@ h2:
 
 logging:
   file:
-    name: database.log
+    name: datasource-proxy.log
   level:
-    org:
-      hibernate:
-        SQL: debug
-        orm:
-          jdbc:
-            bind: trace
+    net:
+      ttddyy:
+        dsproxy:
+          listener: debug

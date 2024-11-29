@@ -38,3 +38,4 @@ out/
 
 ### application.yml ###
 database.log
+datasource-proxy.log
