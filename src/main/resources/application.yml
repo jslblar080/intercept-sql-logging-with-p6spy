@@ -1,6 +1,7 @@
-h2:
-  console:
-    enabled: true
+spring:
+  h2:
+    console:
+      enabled: true
 
 logging:
   file:
