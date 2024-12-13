@@ -46,7 +46,7 @@ public class StudentController {
     }
      */
     @PostMapping(path = "/post")
-    public void save(@RequestBody Student student) throws RuntimeException {
+    public void save(@RequestBody Student student) {
 
         Long studentId = studentService.save(student);
 
